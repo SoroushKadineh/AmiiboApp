@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		EC0474D92125029F00512D65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0474D82125029F00512D65 /* AppDelegate.swift */; };
-		EC0474DB2125029F00512D65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0474DA2125029F00512D65 /* ViewController.swift */; };
 		EC0474DE2125029F00512D65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC0474DC2125029F00512D65 /* Main.storyboard */; };
 		EC0474E0212502A400512D65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC0474DF212502A400512D65 /* Assets.xcassets */; };
 		EC0474E3212502A400512D65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC0474E1212502A400512D65 /* LaunchScreen.storyboard */; };
+		EC0474EF212505ED00512D65 /* AmiiboListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0474EE212505ED00512D65 /* AmiiboListScreen.swift */; };
+		EC0474F12125061400512D65 /* AmiiboDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0474F02125061400512D65 /* AmiiboDetailScreen.swift */; };
+		EC0474F32125066100512D65 /* AmiiboModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0474F22125066100512D65 /* AmiiboModel.swift */; };
+		EC0474F5212540A900512D65 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0474F4212540A900512D65 /* Constants.swift */; };
+		EC0474F72125687400512D65 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0474F62125687400512D65 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EC0474D52125029F00512D65 /* AmiiboApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmiiboApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC0474D82125029F00512D65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EC0474DA2125029F00512D65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EC0474DD2125029F00512D65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC0474DF212502A400512D65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC0474E2212502A400512D65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC0474E4212502A400512D65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC0474EE212505ED00512D65 /* AmiiboListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboListScreen.swift; sourceTree = "<group>"; };
+		EC0474F02125061400512D65 /* AmiiboDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboDetailScreen.swift; sourceTree = "<group>"; };
+		EC0474F22125066100512D65 /* AmiiboModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboModel.swift; sourceTree = "<group>"; };
+		EC0474F4212540A900512D65 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EC0474F62125687400512D65 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,50 @@
 		EC0474D72125029F00512D65 /* AmiiboApp */ = {
 			isa = PBXGroup;
 			children = (
-				EC0474D82125029F00512D65 /* AppDelegate.swift */,
-				EC0474DA2125029F00512D65 /* ViewController.swift */,
-				EC0474DC2125029F00512D65 /* Main.storyboard */,
-				EC0474DF212502A400512D65 /* Assets.xcassets */,
-				EC0474E1212502A400512D65 /* LaunchScreen.storyboard */,
-				EC0474E4212502A400512D65 /* Info.plist */,
+				EC0474ED212502C300512D65 /* Model */,
+				EC0474EC212502C100512D65 /* View */,
+				EC0474EB212502BE00512D65 /* Controller */,
+				EC0474EA212502BA00512D65 /* Resources */,
 			);
 			path = AmiiboApp;
+			sourceTree = "<group>";
+		};
+		EC0474EA212502BA00512D65 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EC0474DF212502A400512D65 /* Assets.xcassets */,
+				EC0474E4212502A400512D65 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EC0474EB212502BE00512D65 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EC0474D82125029F00512D65 /* AppDelegate.swift */,
+				EC0474EE212505ED00512D65 /* AmiiboListScreen.swift */,
+				EC0474F02125061400512D65 /* AmiiboDetailScreen.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EC0474EC212502C100512D65 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EC0474DC2125029F00512D65 /* Main.storyboard */,
+				EC0474E1212502A400512D65 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EC0474ED212502C300512D65 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EC0474F22125066100512D65 /* AmiiboModel.swift */,
+				EC0474F4212540A900512D65 /* Constants.swift */,
+				EC0474F62125687400512D65 /* Extensions.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +179,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC0474DB2125029F00512D65 /* ViewController.swift in Sources */,
+				EC0474F5212540A900512D65 /* Constants.swift in Sources */,
+				EC0474F72125687400512D65 /* Extensions.swift in Sources */,
+				EC0474EF212505ED00512D65 /* AmiiboListScreen.swift in Sources */,
+				EC0474F12125061400512D65 /* AmiiboDetailScreen.swift in Sources */,
+				EC0474F32125066100512D65 /* AmiiboModel.swift in Sources */,
 				EC0474D92125029F00512D65 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,7 +330,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EBYTHUVN6B;
-				INFOPLIST_FILE = AmiiboApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/AmiiboApp/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +348,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EBYTHUVN6B;
-				INFOPLIST_FILE = AmiiboApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/AmiiboApp/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
